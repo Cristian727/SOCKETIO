@@ -11,6 +11,10 @@ app.get('/', (req, res) => {
   res.sendFile(join(__dirname, 'index.html'));
 });
 
+app.get('/paint', (req, res) => {
+  res.sendFile(join(__dirname, 'paint.html'));
+});
+
 io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
         io.emit('chat message', msg);
