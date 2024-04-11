@@ -19,6 +19,12 @@ io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
         io.emit('chat message', msg);
     });
+
+
+    socket.on('paint', (msg) => {
+        console.log('El usuario ha hecho click');
+        //io.emit('chat message', msg);
+    });
 });
 
 server.listen(3000, () => {
