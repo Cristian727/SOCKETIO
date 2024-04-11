@@ -28,6 +28,11 @@
           ellipse(mouseX, mouseY, 20)
         }
     }
+
+    socket.on("paint", (datos) =>{
+
+        ellipse(datos.x, datos.y, 10)    
+    })
     </script>
   </body>
 </html>

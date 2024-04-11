@@ -24,7 +24,7 @@ io.on('connection', (socket) => {
     socket.on('paint', (datos) => {
         console.log("La x es", datos.x);
         console.log("La y es", datos.y);
-
+        io.emit('paint', datos);
     });
 });
 
